@@ -20,8 +20,8 @@ const Projects = () => {
           <span>Power BI • Python • SQL • Excel</span>
 
           <br/><br/>
-          <a href="#" style={{color:"#6c47ff"}}>View Project</a> &nbsp;|&nbsp;
-          <a href="#" style={{color:"#6c47ff"}}>View Code</a>
+          <a href="https://example.com" style={{color:"#6c47ff"}}>View Project</a> &nbsp;|&nbsp;
+          <a href="https://example.com" style={{color:"#6c47ff"}}>View Code</a>
         </div>
 
         {/* Project 2 */}
@@ -37,8 +37,8 @@ const Projects = () => {
           <span>React.js • Node.js • MongoDB • Tailwind CSS</span>
 
           <br/><br/>
-          <a href="#" style={{color:"#6c47ff"}}>View Project</a> &nbsp;|&nbsp;
-          <a href="#" style={{color:"#6c47ff"}}>View Code</a>
+          <a href="https://example.com" style={{color:"#6c47ff"}}>View Project</a> &nbsp;|&nbsp;
+          <a href="https://example.com" style={{color:"#6c47ff"}}>View Code</a>
         </div>
 
         {/* Project 3 */}
@@ -54,8 +54,8 @@ const Projects = () => {
           <span>Python • Sklearn • Pandas • Matplotlib</span>
 
           <br/><br/>
-          <a href="#" style={{color:"#6c47ff"}}>View Project</a> &nbsp;|&nbsp;
-          <a href="#" style={{color:"#6c47ff"}}>View Code</a>
+          <a href="https://example.com" style={{color:"#6c47ff"}}>View Project</a> &nbsp;|&nbsp;
+          <a href="https://example.com" style={{color:"#6c47ff"}}>View Code</a>
         </div>
 
       </div>
