@@ -1,0 +1,673 @@
+/* ===========================================================
+   GLOBAL STYLES
+=========================================================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+
+:root {
+  --primary: #6C63FF;
+  --primary-dark: #4F46E5;
+  --text-dark: #111827;
+  --text-light: #6B7280;
+  --bg-light: #F9FAFB;
+  --card-bg: #ffffff;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+body {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===========================================================
+   NAVBAR
+=========================================================== */
+nav{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 70px;
+  position:sticky;
+  top:0;
+  z-index:50;
+   background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+
+
+nav h2{
+  background:linear-gradient(90deg,#ff4ecd,#635bff);
+  -webkit-background-clip:text;
+  color:transparent;
+  font-size:22px;
+  font-weight:800;
+}
+
+nav ul{
+  display:flex;
+  gap:32px;
+  list-style:none;
+}
+
+nav ul li a{
+  text-decoration:none;
+  font-size:15px;
+  font-weight:500;
+  color:#333;
+  transition:.3s;
+}
+
+nav ul li a:hover{color:#7b42ff;}
+
+
+/* ===========================================================
+   HERO PIXEL PERFECT
+=========================================================== */
+
+.hero{
+  text-align:center;
+  padding: 150px 20px 200px;
+  position:relative;
+  background:linear-gradient(135deg,#f6f4ff,#fef6ff);
+}
+
+/* badge */
+.hero-badge, .badge{
+  display:inline-block;
+  padding:8px 25px;
+  font-size:14px;
+  font-weight:600;
+  border-radius:30px;
+  background:rgba(255,255,255,.55);
+  border:1.3px solid rgba(120,60,255,.35);
+  color:#6a32ff;
+  box-shadow:0 4px 15px rgba(130,60,255,.18);
+  backdrop-filter:blur(8px);
+  margin-bottom:18px;
+}
+
+/* name */
+.hero-title{
+  font-size:54px;
+  font-weight:900;
+  background:linear-gradient(to right,#ff00d4,#0066ff);
+  -webkit-background-clip:text;
+  color:transparent;
+  letter-spacing:-1px;
+}
+.hero-subtitle {
+   font-size: 1rem;          /* text-xl */
+  color: #4b5563;              /* text-gray-600 */
+  margin-bottom: 0.5rem;         /* mb-4 */
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;       /* animation-delay-200 */
+}
+/* md:text-2xl */
+@media (min-width: 768px) {
+  .data-driven-text {
+    font-size: 1.5rem;
+  }
+}
+
+/* dark:text-gray-300 */
+.dark .data-driven-text {
+  color: #d1d5db;
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* subtitle */
+.hero-sub,.hero-subtext{
+  /* margin-top:18px; */
+  font-size:17px;
+  opacity:.8;
+  max-width:650px;
+  line-height:1.55;
+  margin-inline:auto;
+}
+.hero-subtext{
+  margin-top:18px;
+
+}
+
+/* buttons */
+.hero-buttons,.hero-btns{
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  margin-top:28px;
+}
+
+.btn-main{
+  padding:12px 33px;
+  border-radius:40px;
+  font-size:16px;
+  background:linear-gradient(to right,#ff32b0,#7b42ff);
+  border:none;
+  font-weight:600;
+  color:#fff;
+  cursor:pointer;
+  box-shadow:0 8px 25px rgba(255,0,180,.28);
+  transition:.3s;
+}
+.btn-main:hover{transform:translateY(-4px);}
+
+.btn-outline{
+  padding:12px 33px;
+  border-radius:40px;
+  background:#fff;
+  border:2px solid #7b42ff;
+  font-size:16px;
+  font-weight:600;
+  color:#6a32ff;
+  transition:.3s;
+}
+.btn-outline:hover{
+  background:#6a32ff;
+  color:white;
+  transform:translateY(-4px);
+}
+
+.scroll-indicator,.scroll{
+  margin-top:38px;
+  opacity:.6;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+
+
+/* ===========================================================
+        ABOUT — EXACT LIKE REFERENCE
+=========================================================== */
+
+.about-box{
+  width:55%;
+  margin:40px auto;
+  padding:45px;
+   background: linear-gradient(
+    to bottom right,
+    #faf5ff,   /* purple-50 */
+    #fdf2f8    /* pink-50 */
+  );
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.10);
+  font-size:16px;
+  line-height:1.68;
+  text-align:left;
+  color:#333;
+  transition:.3s;
+}
+.about-box:hover{transform:translateY(-5px);}
+
+/* control text wrapping */
+.about-box p{
+  /* max-width:85%; */
+  
+}
+
+/* .about-box p:first-child{max-width:90%;} */
+/* .about-box p:last-child{max-width:75%;} */
+
+/* highlight keyword */
+.highlight{
+  font-weight:700;
+   background:#374151; 
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.highlight.name {
+  color: #804add;
+  font-weight: 500;;
+}
+/* Small section label */
+.section-tag {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #7b42ff;
+  /* margin-bottom: 8px; */
+  margin:70px 0 0px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+/* ===========================================================
+   SKILLS — 2X2 Design
+=========================================================== */
+/* ===========================================================
+   SKILLS SECTION — PIXEL PERFECT LIKE REFERENCE
+=========================================================== */
+
+#skills{
+  padding-top:40px;
+  text-align:center;
+}
+
+/* Title */
+.section-title{
+  font-size:34px;
+  font-weight:700;
+  text-align:center;
+  margin-bottom:35px;
+  
+}
+
+/* Subtitle below heading */
+.skills-subtext{
+  font-size:16px;
+  color:#555;
+  max-width:720px;
+  margin:auto;
+  line-height:1.55;
+  opacity:.9;
+  margin-bottom:55px;
+}
+
+/* GRID */
+.skills-grid{
+  width:80%;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:38px;
+}
+
+/* Card */
+.skill-card{
+  background:#fff;
+  padding:30px 35px;
+  border-radius:18px;
+  box-shadow:0 10px 28px rgba(0,0,0,0.07);
+  transition:.3s;
+  max-width:728px;
+  max-height:456px ;
+}
+.skill-card:hover{ transform:translateY(-5px); }
+
+/* Category Title */
+.skill-card h3{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* Each Skill Row */
+.skill-item{
+  display:grid;
+  grid-template-columns:1fr auto;
+  font-size:15px;
+  margin-bottom:14px;
+  color:#333;
+}
+.skill-item span {
+  text-align: start;
+}
+
+/* Progress Bar Container */
+.skill-bar{
+  width:100%;
+  height:8px;
+  background:#f3e8ff;
+  border-radius:50px;
+  margin-top:6px;
+  overflow:hidden;
+}
+ svg{
+    display: block;
+    vertical-align: middle;
+}
+.gradient-box {
+  width: 3rem;              /* w-12 */
+  height: 3rem;             /* h-12 */
+  background: linear-gradient(to bottom right, #a855f7, #ec4899); /* purple-500 to pink-500 */
+  border-radius: 0.5rem;    /* rounded-lg */
+  display: flex;            /* flex */
+  align-items: center;      /* items-center */
+  justify-content: center;  /* justify-center */
+  color: #ffffff;           /* text-white */
+}
+/* Actual Bar */
+.skill-bar div{
+  height:100%;
+  background:linear-gradient(90deg,#ff2ec8,#7a34ff);
+  border-radius:50px;
+  transition:.7s ease-in-out;
+}
+
+
+/* ===========================================================
+   PROJECTS
+=========================================================== */
+.projects-grid{
+  width:85%;
+  margin:auto;
+  margin-bottom:100px;
+  display:grid;
+  gap:32px;
+  grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+}
+
+.project-card{
+  background:white;
+  padding:22px;
+  border-radius:16px;
+  box-shadow:0 6px 22px rgba(0,0,0,0.08);
+  transition:.3s;
+}
+.project-card:hover{transform:translateY(-8px);}
+.project-card img{width:100%;border-radius:14px;margin-bottom:18px;}
+.project-card h3{font-size:20px;font-weight:700;margin-bottom:5px;}
+.project-card span{font-size:14px;opacity:.7;}
+
+
+/* ===========================================================
+   CONTACT
+=========================================================== */
+/* =================== CONTACT SECTION STYLING =================== */
+/* =================== CONTACT SECTION — PIXEL PERFECT =================== */
+
+#contact{
+  padding:70px 0 80px;
+  text-align:center;
+}
+
+.contact-tag{
+  color:#7b42ff;
+  letter-spacing:2px;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:8px;
+}
+
+.contact-sub{
+  opacity:.8;
+  max-width:620px;
+  margin:10px auto 55px;
+  font-size:16px;
+  line-height:1.55;
+}
+
+
+/* Main Layout */
+.contact-container{
+  width:75%;
+  margin:auto;
+  display:flex;
+  gap:35px;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+
+
+/* ----------------- LEFT Form Card ----------------- */
+.contact-form-box{
+  flex:0.9;
+  background:#fff;
+  padding:32px 35px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.contact-form-box h3{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:22px;
+  text-align:left;
+}
+
+.contact-form-box label{
+  display:block;
+  text-align:left;
+  margin-bottom:6px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.contact-form-box input,
+.contact-form-box textarea{
+  width:100%;
+  padding:12px;
+  font-size:15px;
+  border-radius:8px;
+  border:1px solid #d9d9d9;
+  margin-bottom:16px;
+}
+
+.full-btn{
+  width:100%;
+  margin-top:8px;
+  padding:14px;
+  border-radius:8px;
+  font-weight:600;
+  font-size:16px;
+}
+
+
+/* ----------------- RIGHT Information Side ----------------- */
+.contact-info-side{
+  flex:1;
+  background:#fff;
+  padding:32px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.info-card{
+  background:#faf7ff;
+  padding:22px;
+  border-radius:14px;
+  text-align:left;
+  margin-bottom:22px;
+  border:1px solid #eadbff;
+}
+
+.info-card h3{
+  margin-bottom:13px;
+  font-size:18px;
+  font-weight:700;
+}
+
+.info-card p{
+  margin-bottom:6px;
+  font-size:15px;
+}
+
+
+/* Social Buttons */
+.social-icons{
+  display:flex;
+  gap:14px;
+  margin-top:10px;
+}
+
+.social-icons a {
+  background:#fff;
+  padding:10px 12px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+  cursor:pointer;
+  font-size:20px;
+  color:#6a32ff;
+  transition:.3s;
+}
+
+.social-icons a:hover {
+  background:#7b42ff;
+  color:#fff;
+  transform:scale(1.07);
+}
+
+.social-icons a{
+  background:white;
+  width:42px;
+  height:42px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,.07);
+  cursor:pointer;
+  transition:.3s;
+  font-size:20px;
+}
+
+.social-icons a:hover{
+  background:#7b42ff;
+  color:#fff;
+  transform:translateY(-3px) scale(1.05);
+}
+
+
+
+
+/* ===========================================================
+   FOOTER
+=========================================================== */
+/* =========================
+   FOOTER — FINAL FIX
+========================= */
+.footer {
+  width: 100%;
+  background: #ffffff;
+  padding: 45px 70px 20px;
+  
+  box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 5;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.footer-brand h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #7b42ff;
+  margin-bottom: 4px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #7b42ff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 18px;
+}
+#contact {
+  padding: 70px 0 120px;   /* extra bottom space */
+  background: linear-gradient(135deg, #f6f4ff, #fef6ff);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 35px 25px 20px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+
+
+/* ===========================================================
+   SCROLL TO TOP BUTTON
+=========================================================== */
+#top{
+  position:fixed;
+  bottom:35px;
+  right:35px;
+  background:#6a32ff;
+  color:#fff;
+  padding:13px 17px;
+  border-radius:50%;
+  font-size:18px;
+  cursor:pointer;
+  transition:.3s;
+   z-index: 9999;
+}
+#top:hover{
+  background:#5823ff;
+  transform:scale(1.1);
+}
+
+
+/* FORCE FONT AWESOME ICON VISIBILITY */
+.fa-brands,
+.fa-solid,
+.fa-regular {
+  font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free" !important;
+  font-weight: 900;
+}
+
+/* ABOUT SECTION — SAME AS FIRST PAGE */
+.about-section {
+  padding: 90px 0 110px;
+  background: linear-gradient(135deg, #f6f4ff, #fef6ff);
+  text-align: center;
+}
+
