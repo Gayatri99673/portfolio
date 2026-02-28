@@ -168,10 +168,10 @@ const Contact = () => {
             <div className="info-card">
               <h3>Contact Information</h3>
               <p>
-                <strong>Email:</strong> gayatri.raghuwanshi@example.com
+                <strong>Email:</strong> gayatriraghuwanshi975@gmail.com
               </p>
               <p>
-                <strong>Phone:</strong> +91 98765 43210
+                <strong>Phone:</strong> +91 9368758705
               </p>
               <p>
                 <strong>Location:</strong> Dehradun, Uttarakhand, India
@@ -182,7 +182,7 @@ const Contact = () => {
               <h3>Connect With Me</h3>
               <div className="social-icons">
                 <a
-                  href="https://linkedin.com"
+                  href="www.linkedin.com/in/gayatriraghuwanshi"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -196,7 +196,7 @@ const Contact = () => {
                   <FaGithub />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/miss_raghuwanshii_?igsh=em45d2Y1dmhkbHV6"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -208,10 +208,25 @@ const Contact = () => {
             <div className="info-card">
               <h3>Education</h3>
               <p>
-                <strong>B.Tech Computer Science (Honors)</strong>
+                <strong>B.Tech Computer Science</strong>
               </p>
               <p>Shivalik College of Engineering</p>
               <p>2022 – 2026</p>
+               {/* ── Download CV Button (matches screenshot style) ── */}
+            <a
+              href="/cv/Gayatri_Raghuwanshi_CV.pdf"
+              download="Gayatri_Raghuwanshi_CV.pdf"
+              className="cv-download-btn"
+            >
+              <span className="cv-btn-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 16L7 11H10V4H14V11H17L12 16Z" fill="#00d4ff"/>
+                  <path d="M5 20H19V18H5V20Z" fill="#00d4ff"/>
+                </svg>
+              </span>
+              Download CV
+            </a>
             </div>
           </div>
         </div>
