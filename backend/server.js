@@ -1,64 +1,72 @@
+
 require("dotenv").config();
-
-
 
 const express = require("express");
 const cors = require("cors");
+const nodemailer = require("nodemailer");
 const contactRoutes = require("./routes/contactRoutes");
 
 const connectDB = require("./config/db");
 connectDB();
 
+const transporter = nodemailer.createTransport({
+ service: "gmail",
+ auth: {
+ user: process.env.EMAIL_USER,
+ pass: process.env.EMAIL_PASS
+ }
+});
+
 const app = express();
+
+// Verify email transporter
+transporter.verify((error, success) => {
+ if (error) {
+ console.log("Email transporter error:", error);
+ } else {
+ console.log("Email transporter is ready");
+ }
+});
 
 // Middleware
 app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "https://gayatriraghuwanshi.vercel.app"
-  ]
+ origin: [
+ "http://localhost:3000",
+ "https://gayatriraghuwanshi.vercel.app"
+ ]
 }));
 
 app.use(express.json());
 
-
-
 // Routes
 app.use("/api/contact", contactRoutes);
 
-
 // Test route
 app.get("/", (req, res) => {
-  res.send("Backend is running 🚀");
+ res.send("Backend is running 🚀");
 });
-
-
 
 const PORT = process.env.PORT || 5000;
 
-
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+ console.log(Server running on http://localhost:${PORT});
 });
 
-
-
 // React frontend
-//         ↓
+// ↓
 // POST request to http://localhost:5000/contact
-//         ↓
+// ↓
 // Express receives request
-//         ↓
+// ↓
 // express.json() parses body
-//         ↓
+// ↓
 // Your route extracts data
-//         ↓
+// ↓
 // console.log prints it
-//         ↓
+// ↓
 // res.json sends response
-//         ↓
+// ↓
 // Frontend receives response
-
 
 // 🧠 What You Have Built Technically
 
@@ -91,30 +99,23 @@ app.listen(PORT, () => {
 
 // Server listening
 
-
-
-// Package	Purpose
-// mongoose	Connect to MongoDB
-// dotenv	Manage environment variables
-// nodemailer	Send email
-// express-validator	Validate form data
-// helmet	Add security headers
-// express-rate-limit	Prevent spam
-
-
-
+// Package Purpose
+// mongoose Connect to MongoDB
+// dotenv Manage environment variables
+// nodemailer Send email
+// express-validator Validate form data
+// helmet Add security headers
+// express-rate-limit Prevent spam
 
 // FLOW OF CORS
 
 // Frontend sends request
-//         ↓
+// ↓
 // Browser checks origin
-//         ↓
+// ↓
 // Server sends CORS headers
-//         ↓
+// ↓
 // Browser allows or blocks request
-
-
 
 // GAYATRIIII
 
@@ -143,8 +144,8 @@ app.listen(PORT, () => {
 
 // 5️⃣ Backend responded
 // {
-//   "success": true,
-//   "message": "Email sent successfully!"
+// "success": true,
+// "message": "Email sent successfully!"
 // }
 
 // 6️⃣ Status Code = 200 ✅
@@ -155,10 +156,6 @@ app.listen(PORT, () => {
 // ✔ Server worked
 // ✔ No errors
 
-
-
-
-
 // ✅ Working Express server
 // ✅ REST API route
 // ✅ JSON body handling
@@ -168,12 +165,7 @@ app.listen(PORT, () => {
 // ✅ Nodemailer working
 // ✅ Postman API testing skill
 
-
-
-
 // Frontend → Express → Nodemailer → Gmail → You.
-
-
 
 // If you ever want to:(things if u want to add in future)
 
@@ -183,9 +175,6 @@ app.listen(PORT, () => {
 // • Add animations
 // • Deploy full stack properly
 // • Or level up backend structure
-
-
-
 
 // You now understand:
 
