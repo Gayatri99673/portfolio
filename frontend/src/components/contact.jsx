@@ -26,7 +26,7 @@ const Contact = () => {
 
     try {
      const response = await fetch(
-  "https://portfolio-backend-nghk.onrender.com",
+  "https://portfolio-backend-nghk.onrender.com/api/contact",
   {
     method: "POST",
     headers: {
