@@ -33,8 +33,11 @@ transporter.verify((error, success) => {
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://gayatriraghuwanshi.vercel.app"
-  ]
+    "https://gayatriraghuwanshi.vercel.app",
+    "https://portfolio-i9qbpmz1-gayatri-projects-b8887bf3.vercel.app"
+  ],
+  methods: ["GET", "POST"],
+  credentials: true
 }));
 
 app.use(express.json());
