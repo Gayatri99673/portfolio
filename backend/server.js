@@ -30,15 +30,7 @@ transporter.verify((error, success) => {
 });
 
 // Middleware
-app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "https://gayatriraghuwanshi.vercel.app",
-    "https://portfolio-i9qbpmz1-gayatri-projects-b8887bf3.vercel.app"
-  ],
-  methods: ["GET", "POST"],
-  credentials: true
-}));
+app.use(cors({ origin: "*" }));
 
 app.use(express.json());
 
