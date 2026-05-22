@@ -25,16 +25,13 @@ const Contact = () => {
       setStatus(""); 
 
     try {
-     const response = await fetch(
-  "https://portfolio-backend-nghk.onrender.com/api/contact",
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData),
-  }
-);
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       const data = await response.json();
 
@@ -192,7 +189,7 @@ const Contact = () => {
                   <FaLinkedin />
                 </a>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Gayatri99673"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -217,7 +214,7 @@ const Contact = () => {
               <p>2022 – 2026</p>
                {/* ── Download CV Button (matches screenshot style) ── */}
             <a
-              href="/cv/Gayatri_Raghuwanshi_CV.pdf"
+              href="/cv.pdf"
               download="Gayatri_Raghuwanshi_CV.pdf"
               className="cv-download-btn"
             >
