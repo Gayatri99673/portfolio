@@ -80,7 +80,4 @@ root/
 
 
 
-<!-- Improve structure.
-Add one strong real-world project.
-Deploy properly.
-Polish UI. -->
+
